@@ -30,8 +30,16 @@ int main(){
         } //if an invalid input is entered, it outputs the above statement and then returns to the beginning of the loop. 
 
 
-        //outputs the integer value of user's input
-        printf("the value is %d\n", int_val);
+        //outputs the decimal value of user's input
+        printf("the decimal value is %d\n", int_val);
+
+        //outputs the binary value of the user's input
+        printf("the binary value %d%d%d%d\n", //this line outputs the binary value 
+        (int_val >> 3) & 1, //'>>' shifts the leftmost bit all the way to the right, '& 1' keeps only the rightmost bit
+        (int_val >> 2) & 1, //same as the one above but for the second leftmost bit
+        (int_val >> 1) & 1, // same as the two above but for the second rightmost bit
+        int_val & 1 
+        );
         
 
 
